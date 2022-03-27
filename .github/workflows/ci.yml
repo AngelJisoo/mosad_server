@@ -4,7 +4,7 @@ on:
 # 指定触发事件，并限定分支为master。
   push:
     branches:
-      - "main"
+      - "master"
 
 jobs:
   # 取docker为job_id
@@ -25,7 +25,7 @@ jobs:
         #设置/settings/secrets。在“ 秘密”选项卡中，添加DOCKER_USERNAME和DOCKER_PASSWORD秘密密钥
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
