@@ -1,0 +1,8 @@
+# comment: config file by .toml
+url = "http://127.0.0.1/"
+address = "0.0.0.0:8888"
+
+[redis]
+address = ""
+password = ""
+database = 0
